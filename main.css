@@ -1,0 +1,42 @@
+/* body */
+
+body {
+    margin: 0 3% 0% 3%;
+    background-color: seashell;
+    font-family: Helvetica, monospace;
+}
+
+
+/* Hello world... my name is Jonas Vanbuel */
+
+.helloWorld {
+    color: black;
+    font-size: 60px;
+    line-height: 1em;
+}
+
+
+/* My story class */
+
+.myStory {
+    color: black;
+    font-size: 24px;
+}
+
+
+/* My resume class */
+
+.myResume {
+    color: black;
+    font-size: 24px;
+}
+
+/* horizontal line */
+
+hr {
+    color: black;
+    background-color: black;
+    height: 1px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
