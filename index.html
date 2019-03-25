@@ -1,22 +1,111 @@
 <!DOCTYPE html>
 <html>
-
+    
 <head>
-    <link href="main.css" rel="stylesheet" type="text/css">
+    
+    <style>
+    
+        body {
+            margin: 20px;
+        }
+        
+        /* To include the padding and border in an element's total width and height */
+        * {
+            box-sizing: border-box;
+        }
+        
+        .container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+        }
+        
+        .slideshow {
+            width: 100%;
+            height: 100%;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+  
+        .prev, .next {
+            position: absolute;
+            font-size: 25px;
+            text-align: center;
+            background-color: rgba(0,0,0,0);
+            color: white;
+            border-radius: 50%;
+            top: 42%;
+
+            transition: 0.5s;
+            user-select: none;
+        }
+        
+        .prev {
+            padding: 5px 14px 5px 12px;
+            left: 10px;
+        }
+        
+         .next {
+            padding: 5px 12px 5px 14px;
+            right: 10px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        
+    
+    </style>
+    
 </head>
+    
+<body>
 
-<body>    
-<div class="container">
-    <div class="helloWorld">
-        Hello world... my name is Jonas Vanbuel
+    <!--DOM HTML ELEMENTS-->
+    <div class="container">
+        <img class="slideshow" name="slideshow" src="images/img1.jpg"/>
+        <a class="prev" href="javascript:changeImage(-1)">&#10094;</a>
+        <a class="next" href="javascript:changeImage(1)">&#10095;</a>
     </div>
-    <div class="story">My Story...</div>
-    <div class="motivation">My motivation...</div>
-    <div class="images">My images...
-        <img src="IMG_1022.JPG" alt="This is me!">
-    </div>
-    <div class="links">My Links...</div>
-</div>    
-</body>
-
+    
+    <!--JAVASCRIPT-->
+    <script type="text/javascript">
+    
+        let imageArray = new Array("images/img1.jpg", "images/img2.jpg", "images/img3.jpg");
+        let descriptionArray = new Array("Image description 1", "Image description 2", "Image description 3");
+        let imageIndex = 0;
+        
+        function changeImage(n) {
+            
+            imageIndex = imageIndex + n;
+            
+            if (imageIndex >= imageArray.length) {
+                imageIndex = 0;
+            }
+            if (imageIndex < 0) {
+                imageIndex = imageArray.length - 1;
+            }
+            
+            document.slideshow.src = imageArray[imageIndex];
+            
+            document.getElementById("description").innerHTML = descriptionArray[imageIndex];
+            
+            return false;
+            
+        }
+        
+        /* Currently not implemented
+        function auto() {
+            
+            setInterval("changeImage(1)", 3000);
+            
+        }
+        */
+        
+    </script>
+    
+</body>    
+    
 </html>
