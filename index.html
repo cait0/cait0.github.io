@@ -3,109 +3,47 @@
     
 <head>
     
-    <style>
+    <meta charset = "utf-8">
+    <title>HELLO WORLD</title>
     
-        body {
-            margin: 20px;
-        }
-        
-        /* To include the padding and border in an element's total width and height */
-        * {
-            box-sizing: border-box;
-        }
-        
-        .container {
-            max-width: 800px;
-            position: relative;
-            margin: auto;
-        }
-        
-        .slideshow {
-            width: 100%;
-            height: 100%;
-        }
-        
-        a {
-            text-decoration: none;
-        }
-  
-        .prev, .next {
-            position: absolute;
-            font-size: 25px;
-            text-align: center;
-            background-color: rgba(0,0,0,0);
-            color: white;
-            border-radius: 50%;
-            top: 42%;
-
-            transition: 0.5s;
-            user-select: none;
-        }
-        
-        .prev {
-            padding: 5px 14px 5px 12px;
-            left: 10px;
-        }
-        
-         .next {
-            padding: 5px 12px 5px 14px;
-            right: 10px;
-        }
-
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.3);
-        }
-        
-    
-    </style>
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="style.css">
     
 </head>
     
 <body>
 
-    <!--DOM HTML ELEMENTS-->
+    <!--HTML DOCUMENT ELEMENTS-->
     <div class="container">
+        
+        <!--SLIDESHOW-->
         <img class="slideshow" name="slideshow" src="images/img1.jpg"/>
-        <a class="prev" href="javascript:changeImage(-1)">&#10094;</a>
-        <a class="next" href="javascript:changeImage(1)">&#10095;</a>
+        
+        <!--CONTROL BUTTONS-->
+        <div>
+            <a class="prev" onclick="manChangeImage(-1)">&#10094;</a>
+            <a class="next" onclick="manChangeImage(1)">&#10095;</a>
+            
+            <!--SVG PLAY BUTTON-->
+            <a onclick="playPause()"><svg
+                id="playPauseButton"
+                height="50"
+                width="50"
+                viewBox="0 0 1200 1200">
+                <path d="M 600,1200 C 268.65,1200 0,931.35 0,600 0,268.65 268.65,0 600,0 c 331.35,0 600,268.65 600,600 0,331.35 -268.65,600 -600,600 z M 450,300.45 450,899.55 900,600 450,300.45 z" id="path16995" />
+            </svg></a>
+        </div>
+        
+        
+        <!-- INITIAL BUTTON IMPLEMENTATION
+        <a class="play" id="playPause" onclick="playPause()">&#9658;</a>
+        -->
+        
     </div>
     
     <!--JAVASCRIPT-->
-    <script type="text/javascript">
-    
-        let imageArray = new Array("images/img1.jpg", "images/img2.jpg", "images/img3.jpg");
-        let descriptionArray = new Array("Image description 1", "Image description 2", "Image description 3");
-        let imageIndex = 0;
-        
-        function changeImage(n) {
-            
-            imageIndex = imageIndex + n;
-            
-            if (imageIndex >= imageArray.length) {
-                imageIndex = 0;
-            }
-            if (imageIndex < 0) {
-                imageIndex = imageArray.length - 1;
-            }
-            
-            document.slideshow.src = imageArray[imageIndex];
-            
-            document.getElementById("description").innerHTML = descriptionArray[imageIndex];
-            
-            return false;
-            
-        }
-        
-        /* Currently not implemented
-        function auto() {
-            
-            setInterval("changeImage(1)", 3000);
-            
-        }
-        */
-        
-    </script>
+    <script type="text/javascript" src="script.js"></script>
     
 </body>    
-    
+
 </html>
