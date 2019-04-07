@@ -1,49 +1,26 @@
-<!DOCTYPE html>
+<!doctype HTML>
+
 <html>
-    
+
 <head>
     
-    <meta charset = "utf-8">
-    <title>HELLO WORLD</title>
-    
-    <!--CSS-->
     <link rel="stylesheet" type="text/css" href="style.css">
     
 </head>
-    
+
 <body>
-
-    <!--HTML DOCUMENT ELEMENTS-->
+    
+    <button onclick="man_prev()">prev</button>
+    <button onclick="man_next()">next</button>
+    <button id="playPause" onclick="playPause()">play</button>
+    
     <div class="container">
-        
-        <!--SLIDESHOW-->
-        <img class="slideshow" name="slideshow" src="images/img1.jpg"/>
-        
-        <!--CONTROL BUTTONS-->
-        <div>
-            <a class="prev" onclick="manChangeImage(-1)">&#10094;</a>
-            <a class="next" onclick="manChangeImage(1)">&#10095;</a>
-            
-            <!--SVG PLAY BUTTON-->
-            <a onclick="playPause()"><svg
-                id="playPauseButton"
-                height="50"
-                width="50"
-                viewBox="0 0 1200 1200">
-                <path d="M 600,1200 C 268.65,1200 0,931.35 0,600 0,268.65 268.65,0 600,0 c 331.35,0 600,268.65 600,600 0,331.35 -268.65,600 -600,600 z M 450,300.45 450,899.55 900,600 450,300.45 z" id="path16995" />
-            </svg></a>
-        </div>
-        
-        
-        <!-- INITIAL BUTTON IMPLEMENTATION
-        <a class="play" id="playPause" onclick="playPause()">&#9658;</a>
-        -->
-        
+        <div id="slide"></div>
     </div>
-    
-    <!--JAVASCRIPT-->
-    <script type="text/javascript" src="script.js"></script>
-    
-</body>    
 
+    <script src="script.js"></script>
+
+
+</body>
+    
 </html>

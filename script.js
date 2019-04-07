@@ -1,78 +1,99 @@
-let imageArray = new Array("Images/img1.jpg", "Images/img2.jpg", "Images/img3.jpg");
-let imageIndex = 0;
+let index = 0;
+let slideInterval = undefined;
+let playing = false;
 
-//Buttons add or deduct 1 from n
-function manChangeImage(n) {
+function man_next() {
     
     pause();
-    imageIndex += n;
     
-    //If at last image from imageArray when going forward - point to first image
-    if (imageIndex >= imageArray.length) {
-        imageIndex = 0;
-    }
-
-    //If at first image when going back - point back to last image
-    if (imageIndex < 0) {
-        imageIndex = imageArray.length - 1;
-    }
-
-    //Change image in HTML
-    document.slideshow.src = imageArray[imageIndex];
-            
-}
-
-function autoChangeImage() {
+    index += 1;
     
-     imageIndex++;
+    if (index > 2) {
+        index = 0
+    }
     
-    //If at last image from imageArray when going forward - point to first image
-    if (imageIndex >= imageArray.length) {
-        imageIndex = 0;
+    switch (index) {
+        case 0:
+            document.getElementById("slide").style.animation = "next-image-one 1s forwards";
+            break;
+        case 1:
+            document.getElementById("slide").style.animation = "next-image-two 1s forwards";
+            break;
+        case 2:
+            document.getElementById("slide").style.animation = "next-image-three 1s forwards";
+            break;
     }
-
-    //If at first image when going back - point back to last image
-    if (imageIndex < 0) {
-        imageIndex = imageArray.length - 1;
-    }
-
-    //Change image in HTML
-    document.slideshow.src = imageArray[imageIndex];
     
 }
 
-let playing = false;
-let slideInterval = undefined;
+function man_prev() {
+    
+    pause();
+    
+    index -= 1;
+    
+    if (index < 0) {
+        index = 2;
+    }
+    
+    switch (index) {
+        case 0:
+            document.getElementById("slide").style.animation = "prev-image-one 1s forwards";
+            break;
+        case 1:
+            document.getElementById("slide").style.animation = "prev-image-two 1s forwards";
+            break;
+        case 2:
+            document.getElementById("slide").style.animation = "prev-image-three 1s forwards";
+            break;
+    }
+    
+}
+
+function auto_next() {
+    
+    index += 1;
+    
+    if (index > 2) {
+        index = 0
+    }
+    
+    switch (index) {
+        case 0:
+            document.getElementById("slide").style.animation = "next-image-one 1s forwards";
+            break;
+        case 1:
+            document.getElementById("slide").style.animation = "next-image-two 1s forwards";
+            break;
+        case 2:
+            document.getElementById("slide").style.animation = "next-image-three 1s forwards";
+            break;
+    }
+    
+}
 
 function play() {
-    slideInterval = setInterval("autoChangeImage()", 1000);
-    //document.getElementById("playPause").innerHTML = "&#9612;&#9612;";
+    
+    slideInterval = setInterval(auto_next, 1000);
     playing = true;
-    //console.log("playing: " + playing);
+    document.getElementById("playPause").innerHTML = "pause";
+    
 }
 
 function pause() {
+    
     clearInterval(slideInterval);
-    //document.getElementById("playPause").innerHTML = "&#9658;";
     playing = false;
-    //console.log("playing: " + playing);
+    document.getElementById("playPause").innerHTML = "play";
 }
 
 function playPause() {
     
     if (playing) {
         return pause();
-    } else {
+    }
+    else {
         return play();
     }
     
 }
-
-window.addEventListener("keydown", event => {
-    
-    //next
-    if (event.key === "ArrowRight") manChangeImage(1);
-    if (event.key === "ArrowLeft") manChangeImage(-1);
-    //prev
-    
-});
