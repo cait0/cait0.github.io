@@ -1,78 +1,78 @@
-let imageArray = new Array("Images/img1.jpg", "Images/img2.jpg", "Images/img3.jpg");
-let imageIndex = 0;
+//RANDOM BACKGROUND COLOUR
+let rrr = Math.floor(Math.random() * (255 - 170) + 170);
+let ggg = Math.floor(Math.random() * (255 - 170) + 170);
+let bbb = Math.floor(Math.random() * (255 - 170) + 170);
+let rrrgggbbb = "rgb("+rrr+","+ggg+","+bbb+")";
 
-//Buttons add or deduct 1 from n
-function manChangeImage(n) {
-    
-    pause();
-    imageIndex += n;
-    
-    //If at last image from imageArray when going forward - point to first image
-    if (imageIndex >= imageArray.length) {
-        imageIndex = 0;
-    }
+document.documentElement.style.setProperty("--random-background-color", rrrgggbbb);
 
-    //If at first image when going back - point back to last image
-    if (imageIndex < 0) {
-        imageIndex = imageArray.length - 1;
-    }
 
-    //Change image in HTML
-    document.slideshow.src = imageArray[imageIndex];
-            
-}
+//BACKGROUND COLOUR + DARK LEVEL 1
+let rrr_dark1 = rrr - 20;
+let ggg_dark1 = ggg - 20;
+let bbb_dark1 = bbb - 20;
+let rrrgggbbb_dark1 = "rgb("+rrr_dark1+","+ggg_dark1+","+bbb_dark1+")";
 
-function autoChangeImage() {
-    
-     imageIndex++;
-    
-    //If at last image from imageArray when going forward - point to first image
-    if (imageIndex >= imageArray.length) {
-        imageIndex = 0;
-    }
 
-    //If at first image when going back - point back to last image
-    if (imageIndex < 0) {
-        imageIndex = imageArray.length - 1;
-    }
+//BACKGROUND COLOUR + DARK LEVEL 2
+let rrr_dark2 = rrr - 40;
+let ggg_dark2 = ggg - 40;
+let bbb_dark2 = bbb - 40;
+let rrrgggbbb_dark2 = "rgb("+rrr_dark2+","+ggg_dark2+","+bbb_dark2+")";
 
-    //Change image in HTML
-    document.slideshow.src = imageArray[imageIndex];
-    
-}
 
-let playing = false;
-let slideInterval = undefined;
+//LEFT ARROW CUSTOM STYLING
+let leftArrow = document.getElementById("leftArrow");
+let LA_bottom = document.getElementById("leftArrow").getElementsByClassName("bottom");
+let LA_shadow = document.getElementById("leftArrow").getElementsByClassName("shadow");
+let LA_outline = document.getElementById("leftArrow").getElementsByClassName("outline");
 
-function play() {
-    slideInterval = setInterval("autoChangeImage()", 1000);
-    //document.getElementById("playPause").innerHTML = "&#9612;&#9612;";
-    playing = true;
-    //console.log("playing: " + playing);
-}
+LA_bottom[0].style.fill = rrrgggbbb;
 
-function pause() {
-    clearInterval(slideInterval);
-    //document.getElementById("playPause").innerHTML = "&#9658;";
-    playing = false;
-    //console.log("playing: " + playing);
-}
-
-function playPause() {
-    
-    if (playing) {
-        return pause();
-    } else {
-        return play();
-    }
-    
-}
-
-window.addEventListener("keydown", event => {
-    
-    //next
-    if (event.key === "ArrowRight") manChangeImage(1);
-    if (event.key === "ArrowLeft") manChangeImage(-1);
-    //prev
-    
+leftArrow.addEventListener("mouseenter", function() {
+    LA_bottom[0].style.fill = rrrgggbbb_dark1;
 });
+
+leftArrow.addEventListener("mouseleave", function() {
+    LA_bottom[0].style.fill = rrrgggbbb;  
+});
+
+leftArrow.addEventListener("mousedown", function() {
+    LA_bottom[0].style.fill = rrrgggbbb_dark2;
+    LA_shadow[0].style.fill = "black";
+    LA_shadow[0].style.stroke = "black";
+})
+
+leftArrow.addEventListener("mouseup", function() {
+    LA_bottom[0].style.fill = rrrgggbbb;
+    LA_shadow[0].style.fill = "none";
+    LA_shadow[0].style.stroke = "none";
+})
+
+//RIGHT ARROW CUSTOM STYLING
+let rightArrow = document.getElementById("rightArrow");
+let RA_bottom = document.getElementById("rightArrow").getElementsByClassName("bottom");
+let RA_shadow = document.getElementById("rightArrow").getElementsByClassName("shadow");
+let RA_outline = document.getElementById("rightArrow").getElementsByClassName("outline");
+
+RA_bottom[0].style.fill = rrrgggbbb;
+
+rightArrow.addEventListener("mouseenter", function() {
+    RA_bottom[0].style.fill = rrrgggbbb_dark1;                        
+});
+
+rightArrow.addEventListener("mouseleave", function() {
+    RA_bottom[0].style.fill = rrrgggbbb;                         
+});
+
+rightArrow.addEventListener("mousedown", function() {
+    RA_bottom[0].style.fill = rrrgggbbb_dark2;
+    RA_shadow[0].style.fill = "black";
+    RA_shadow[0].style.stroke = "black";
+})
+
+rightArrow.addEventListener("mouseup", function() {
+    RA_bottom[0].style.fill = rrrgggbbb;
+    RA_shadow[0].style.fill = "none";
+    RA_shadow[0].style.stroke = "none";
+})
