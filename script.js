@@ -1,99 +1,78 @@
-let index = 0;
-let slideInterval = undefined;
-let playing = false;
+//RANDOM BACKGROUND COLOUR
+let rrr = Math.floor(Math.random() * (255 - 170) + 170);
+let ggg = Math.floor(Math.random() * (255 - 170) + 170);
+let bbb = Math.floor(Math.random() * (255 - 170) + 170);
+let rrrgggbbb = "rgb("+rrr+","+ggg+","+bbb+")";
 
-function man_next() {
-    
-    pause();
-    
-    index += 1;
-    
-    if (index > 2) {
-        index = 0
-    }
-    
-    switch (index) {
-        case 0:
-            document.getElementById("slide").style.animation = "next-image-one 1s forwards";
-            break;
-        case 1:
-            document.getElementById("slide").style.animation = "next-image-two 1s forwards";
-            break;
-        case 2:
-            document.getElementById("slide").style.animation = "next-image-three 1s forwards";
-            break;
-    }
-    
-}
+document.documentElement.style.setProperty("--random-background-color", rrrgggbbb);
 
-function man_prev() {
-    
-    pause();
-    
-    index -= 1;
-    
-    if (index < 0) {
-        index = 2;
-    }
-    
-    switch (index) {
-        case 0:
-            document.getElementById("slide").style.animation = "prev-image-one 1s forwards";
-            break;
-        case 1:
-            document.getElementById("slide").style.animation = "prev-image-two 1s forwards";
-            break;
-        case 2:
-            document.getElementById("slide").style.animation = "prev-image-three 1s forwards";
-            break;
-    }
-    
-}
 
-function auto_next() {
-    
-    index += 1;
-    
-    if (index > 2) {
-        index = 0
-    }
-    
-    switch (index) {
-        case 0:
-            document.getElementById("slide").style.animation = "next-image-one 1s forwards";
-            break;
-        case 1:
-            document.getElementById("slide").style.animation = "next-image-two 1s forwards";
-            break;
-        case 2:
-            document.getElementById("slide").style.animation = "next-image-three 1s forwards";
-            break;
-    }
-    
-}
+//BACKGROUND COLOUR + DARK LEVEL 1
+let rrr_dark1 = rrr - 20;
+let ggg_dark1 = ggg - 20;
+let bbb_dark1 = bbb - 20;
+let rrrgggbbb_dark1 = "rgb("+rrr_dark1+","+ggg_dark1+","+bbb_dark1+")";
 
-function play() {
-    
-    slideInterval = setInterval(auto_next, 1000);
-    playing = true;
-    document.getElementById("playPause").innerHTML = "pause";
-    
-}
 
-function pause() {
-    
-    clearInterval(slideInterval);
-    playing = false;
-    document.getElementById("playPause").innerHTML = "play";
-}
+//BACKGROUND COLOUR + DARK LEVEL 2
+let rrr_dark2 = rrr - 40;
+let ggg_dark2 = ggg - 40;
+let bbb_dark2 = bbb - 40;
+let rrrgggbbb_dark2 = "rgb("+rrr_dark2+","+ggg_dark2+","+bbb_dark2+")";
 
-function playPause() {
-    
-    if (playing) {
-        return pause();
-    }
-    else {
-        return play();
-    }
-    
-}
+
+//LEFT ARROW CUSTOM STYLING
+let leftArrow = document.getElementById("leftArrow");
+let LA_bottom = document.getElementById("leftArrow").getElementsByClassName("bottom");
+let LA_shadow = document.getElementById("leftArrow").getElementsByClassName("shadow");
+let LA_outline = document.getElementById("leftArrow").getElementsByClassName("outline");
+
+LA_bottom[0].style.fill = rrrgggbbb;
+
+leftArrow.addEventListener("mouseenter", function() {
+    LA_bottom[0].style.fill = rrrgggbbb_dark1;
+});
+
+leftArrow.addEventListener("mouseleave", function() {
+    LA_bottom[0].style.fill = rrrgggbbb;  
+});
+
+leftArrow.addEventListener("mousedown", function() {
+    LA_bottom[0].style.fill = rrrgggbbb_dark2;
+    LA_shadow[0].style.fill = "black";
+    LA_shadow[0].style.stroke = "black";
+})
+
+leftArrow.addEventListener("mouseup", function() {
+    LA_bottom[0].style.fill = rrrgggbbb;
+    LA_shadow[0].style.fill = "none";
+    LA_shadow[0].style.stroke = "none";
+})
+
+//RIGHT ARROW CUSTOM STYLING
+let rightArrow = document.getElementById("rightArrow");
+let RA_bottom = document.getElementById("rightArrow").getElementsByClassName("bottom");
+let RA_shadow = document.getElementById("rightArrow").getElementsByClassName("shadow");
+let RA_outline = document.getElementById("rightArrow").getElementsByClassName("outline");
+
+RA_bottom[0].style.fill = rrrgggbbb;
+
+rightArrow.addEventListener("mouseenter", function() {
+    RA_bottom[0].style.fill = rrrgggbbb_dark1;                        
+});
+
+rightArrow.addEventListener("mouseleave", function() {
+    RA_bottom[0].style.fill = rrrgggbbb;                         
+});
+
+rightArrow.addEventListener("mousedown", function() {
+    RA_bottom[0].style.fill = rrrgggbbb_dark2;
+    RA_shadow[0].style.fill = "black";
+    RA_shadow[0].style.stroke = "black";
+})
+
+rightArrow.addEventListener("mouseup", function() {
+    RA_bottom[0].style.fill = rrrgggbbb;
+    RA_shadow[0].style.fill = "none";
+    RA_shadow[0].style.stroke = "none";
+})
