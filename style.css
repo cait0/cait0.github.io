@@ -40,7 +40,6 @@ header {
     margin-left: -150px;
 }
 
-
 .text {
     width: 600px;
     margin: auto;
@@ -61,31 +60,173 @@ header {
     filter: drop-shadow(4px 4px)
 }
 
+
+
+/* IMAGE CAROUSEL */
 #slideshowContainer {
-    width: 400px;
-    height: 300px;
+    height: 375px;
+    width: 500px;
     position: relative;
     margin: auto;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 120px;
+    
+    /* BORDERS CURRENTLY PUSHING SLIDESHOW OUT OF ITS PLACE
+    border: 1.5px solid black;
+    filter: drop-shadow(4px 4px);
+    */
+    
 }
 
 #slideshow {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-image: url(Images/Temp_background.jpg);
+    margin: 0px;
+    background-image: url(Images/image_sprite.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    border: 1.5px solid black;
-    filter: drop-shadow(4px 4px)
+    background-position: -500px;
+    background-size: cover;
 }
+
+
+
+/*NEXT KEYFRAMES*/
+
+@keyframes next-image-one {
+    from {
+        background-position: 0px 0px;
+    }
+    to {
+        background-position: -500px 0px;
+    } 
+}
+
+@keyframes next-image-two {
+    from {
+        background-position: -500px 0px;
+    }
+    to {
+        background-position: -1000px 0px;
+    }
+}
+
+@keyframes next-image-three {
+    from {
+        background-position: -1000px 0px;
+    }
+    to {
+        background-position: -1500px 0px;
+    }
+}
+
+@keyframes next-image-four {
+    from {
+        background-position: -1500px 0px;
+    }
+    to {
+        background-position: -2000px 0px;
+    }
+}
+
+@keyframes next-image-five {
+    from {
+        background-position: -2000px 0px;
+    }
+    to {
+        background-position: -2500px 0px;
+    }
+}
+
+@keyframes next-image-six {
+    from {
+        background-position: -2500px 0px;
+    }
+    to {
+        background-position: -3000px 0px;
+    }
+}
+
+@keyframes next-image-seven {
+    from {
+        background-position: -3000px 0px;
+    }
+    to {
+        background-position: -3500px 0px;
+    }
+}
+
+
+/* PREVIOUS KEYFRAMES */
+@keyframes prev-image-one {
+    from {
+       background-position: -1000px 0px;
+    }
+    to {
+        background-position: -500px 0px;
+    }
+}
+
+@keyframes prev-image-two {
+    from {
+       background-position: -1500px 0px;
+    }
+    to {
+        background-position: -1000px 0px;
+    }
+}
+
+@keyframes prev-image-three {
+    from {
+       background-position: -2000px 0px;
+    }
+    to {
+        background-position: -1500px 0px;
+    }
+}
+
+@keyframes prev-image-four {
+    from {
+       background-position: -2500px 0px;
+    }
+    to {
+        background-position: -2000px 0px;
+    }
+}
+
+@keyframes prev-image-five {
+    from {
+       background-position: -3000px 0px;
+    }
+    to {
+        background-position: -2500px 0px;
+    }
+}
+
+@keyframes prev-image-six {
+    from {
+       background-position: -3500px 0px;
+    }
+    to {
+        background-position: -3000px 0px;
+    }
+}
+
+@keyframes prev-image-seven {
+    from {
+       background-position: -4000px 0px;
+    }
+    to {
+        background-position: -3500px 0px;
+    }
+}
+
+
 
 #leftArrow {
     height: 60px;
     position: absolute;
-    left: -45px;
+    left: -65px;
     top: 50%;
     margin-top: -30px;
     z-index: 1;
@@ -94,8 +235,17 @@ header {
 #rightArrow {
     height: 60px;
     position: absolute;
-    right: -45px;
+    right: -65px;
     top: 50%;
     margin-top: -30px;
     z-index: 1;
+}
+
+#playPauseButton {
+    height: 80px;
+    width: auto;
+    position: absolute;
+    top: 390px;
+    left: 50%;
+    margin-left: -40px;
 }
