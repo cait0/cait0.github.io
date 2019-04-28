@@ -10,7 +10,7 @@
 
 html, body {
     /*background-color: var(--random-background-color);*/
-    background-color: black;
+    /*background-color: black;*/
     width: 100%;
     padding: 0px;
     margin: 0px;
@@ -43,8 +43,8 @@ header {
     /*display: block;*/
     display: block;
     position: relative;
-    width: 100%;
-    margin: 0px 5%;
+    width: 90%;
+    margin: auto;
     background-color: blue;
 }
 
@@ -85,7 +85,7 @@ p {
     padding-bottom: 67.5%;
     margin: auto;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
     
     /* BORDERS CURRENTLY PUSHING SLIDESHOW OUT OF ITS PLACE
     border: 1.5px solid black;*/
@@ -105,6 +105,29 @@ p {
     /*filter: drop-shadow(-4px -4px);*/
 }
 
+#leftArrow {
+    width: 60px;
+    position: absolute;
+    left: 10px;
+    bottom: -80px;
+    z-index: 1;
+}
+
+#rightArrow {
+    width: 60px;
+    position: absolute;
+    right: 10px;
+    bottom: -80px;
+    z-index: 1;
+}
+
+#playPauseButton {
+    height: 80px;
+    position: absolute;
+    bottom: -90px;
+    left: 50%;
+    margin-left: -40px;
+}
 
 /*NEXT KEYFRAMES*/
 
@@ -236,34 +259,6 @@ p {
     }
 }
 
-
-
-#leftArrow {
-    height: 60px;
-    position: absolute;
-    left: -75px;
-    top: 50%;
-    margin-top: -30px;
-    z-index: 1;
-}
-
-#rightArrow {
-    height: 60px;
-    position: absolute;
-    right: -75px;
-    top: 50%;
-    margin-top: -30px;
-    z-index: 1;
-}
-
-#playPauseButton {
-    height: 80px;
-    width: auto;
-    position: absolute;
-    top: 390px;
-    left: 50%;
-    margin-left: -40px;
-}
 
 /* LINKS */
 
