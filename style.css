@@ -21,11 +21,11 @@ header {
     display: block;
     position: fixed;
     top: 0px;
-    height: 150px;
-    /*max-height: 15%;*/
+    height: 200px;
+    max-height: 10%;
     width: 100%;
     margin: 0px;
-    padding: 10px 5%;
+    padding: 3% 5%;
     z-index: 500;
     /*background-color: var(--random-background-color);*/
     background-color: yellow;
@@ -79,13 +79,14 @@ p {
 
 #slideshow-container {
     position: relative;
+    background-color: yellow;
     display: block;
     width: 90%;
     height: 0;
     padding-bottom: 67.5%;
     margin: auto;
     margin-top: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 25vw;
     
     /* BORDERS CURRENTLY PUSHING SLIDESHOW OUT OF ITS PLACE
     border: 1.5px solid black;*/
@@ -106,156 +107,158 @@ p {
 }
 
 #leftArrow {
-    width: 60px;
+    width: 15vw;
     position: absolute;
-    left: 10px;
-    bottom: -80px;
+    left: 0vw;
+    bottom: -20vw;
     z-index: 1;
 }
 
 #rightArrow {
-    width: 60px;
+    width: 15vw;
     position: absolute;
-    right: 10px;
-    bottom: -80px;
+    right: 0vw;
+    bottom: -20vw;
     z-index: 1;
 }
 
 #playPauseButton {
-    height: 80px;
+    width: 20vw;
     position: absolute;
-    bottom: -90px;
-    left: 50%;
-    margin-left: -40px;
+    bottom: -22.5vw;
+    left: 50vw;
+    margin: 0;
+    margin-left: -15vw;
 }
 
 /*NEXT KEYFRAMES*/
 
 @keyframes next-image-one {
     from {
-        background-position: 0px 0px;
+        background-position: 0% 0%;
     }
     to {
-        background-position: -500px 0px;
+        background-position: 12.5% 0%;
     } 
 }
 
 @keyframes next-image-two {
     from {
-        background-position: -500px 0px;
+        background-position: 12.5% 0%;
     }
     to {
-        background-position: -1000px 0px;
+        background-position: 25% 0%;
     }
 }
 
 @keyframes next-image-three {
     from {
-        background-position: -1000px 0px;
+        background-position: 25% 0%;
     }
     to {
-        background-position: -1500px 0px;
+        background-position: 37.5% 0%;
     }
 }
 
 @keyframes next-image-four {
     from {
-        background-position: -1500px 0px;
+        background-position: 37.5% 0%;
     }
     to {
-        background-position: -2000px 0px;
+        background-position: 50% 0%;
     }
 }
 
 @keyframes next-image-five {
     from {
-        background-position: -2000px 0px;
+        background-position: 50% 0%;
     }
     to {
-        background-position: -2500px 0px;
+        background-position: 62.5% 0%;
     }
 }
 
 @keyframes next-image-six {
     from {
-        background-position: -2500px 0px;
+        background-position: 62.5% 0%;
     }
     to {
-        background-position: -3000px 0px;
+        background-position: 75% 0%;
     }
 }
 
 @keyframes next-image-seven {
     from {
-        background-position: -3000px 0px;
+        background-position: 75% 0%;
     }
     to {
-        background-position: -3500px 0px;
+        background-position: 87.5% 0%;
     }
 }
 
 
 /* PREVIOUS KEYFRAMES */
+
 @keyframes prev-image-one {
     from {
-       background-position: -1000px 0px;
+       background-position: 25% 0%;
     }
     to {
-        background-position: -500px 0px;
+        background-position: 12.5% 0%;
     }
 }
 
 @keyframes prev-image-two {
     from {
-       background-position: -1500px 0px;
+       background-position: 37.5% 0%;
     }
     to {
-        background-position: -1000px 0px;
+        background-position: 25% 0%;
     }
 }
 
 @keyframes prev-image-three {
     from {
-       background-position: -2000px 0px;
+       background-position: 50% 0%;
     }
     to {
-        background-position: -1500px 0px;
+        background-position: 37.5% 0%;
     }
 }
 
 @keyframes prev-image-four {
     from {
-       background-position: -2500px 0px;
+       background-position: 62.5% 0%;
     }
     to {
-        background-position: -2000px 0px;
+        background-position: 50% 0%;
     }
 }
 
 @keyframes prev-image-five {
     from {
-       background-position: -3000px 0px;
+       background-position: 75% 0%;
     }
     to {
-        background-position: -2500px 0px;
+        background-position: 62.5% 0%;
     }
 }
 
 @keyframes prev-image-six {
     from {
-       background-position: -3500px 0px;
+       background-position: 87.5% 0%;
     }
     to {
-        background-position: -3000px 0px;
+        background-position: 75% 0%;
     }
 }
 
 @keyframes prev-image-seven {
     from {
-       background-position: -4000px 0px;
+       background-position: 100% 0%;
     }
     to {
-        background-position: -3500px 0px;
+        background-position: 87.5% 0%;
     }
 }
 
@@ -281,12 +284,6 @@ p {
     margin: auto;
     position: relative;
     opacity: 0.8;
-}
-
-#freecodecamp {
-    width: 65px;
-    top: 50%;
-    margin-top: -23px;
 }
 
 /* RESPONSIVE SETTINGS */
