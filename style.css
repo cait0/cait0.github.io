@@ -51,7 +51,7 @@ header {
 }
 
 .text-container:nth-of-type(1) {
-    margin-top: 160px;
+    margin-top: 15vh;
     background-color: red;
 }
 
