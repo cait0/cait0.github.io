@@ -22,7 +22,6 @@ header {
     position: fixed;
     top: 0px;
     height: 15vh;
-    min-height: 100px;
     width: 100vw;
     margin: 0;
     padding: auto 5vw;
@@ -34,7 +33,6 @@ header {
 #cait0_logo {
     display: block;
     height: 12.5vh;
-    min-height: 80px;
     margin: auto;
     background-color: orange;
 }
