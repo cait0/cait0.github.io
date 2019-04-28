@@ -33,6 +33,7 @@ header {
 #cait0_logo {
     display: block;
     height: 12.5vh;
+    max-width: 90vw;
     margin: auto;
     background-color: orange;
 }
@@ -64,7 +65,7 @@ p {
 }
 
 #passport-image {
-    width: 45%;
+    width: 45vw;
     height: auto;
     float: left;
     margin: 0px 15px 15px 0px;
@@ -79,12 +80,12 @@ p {
     position: relative;
     background-color: yellow;
     display: block;
-    width: 90%;
+    width: 90vw;
     height: 0;
-    padding-bottom: 67.5%;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 2em;
     margin-bottom: 25vw;
+    padding-bottom: 67.5vw;
     
     /* BORDERS CURRENTLY PUSHING SLIDESHOW OUT OF ITS PLACE
     border: 1.5px solid black;*/
@@ -288,3 +289,63 @@ p {
 }
 
 /* RESPONSIVE SETTINGS */
+
+@media only screen and (min-width:768px) {
+    
+    #cait0_logo {
+        max-width: 40vw;
+    }
+    
+    .text-container {
+        width: 60vw;
+    }
+    
+    .text-container:nth-of-type(1) {
+        background-color: black;
+    }
+    
+    p {
+        font-size: 1em;
+    }
+    
+    #passport-image {
+        position: relative;
+        width: 25vw;
+        left: -5vw;
+        float: left;
+        /*margin: 0vw 3vw 3vw 0vw;*/
+        /*border: 1.5px solid black;*/
+        filter: drop-shadow(-5px -5px black);
+    }
+ 
+    #slideshow-container {
+        width: 60vw;
+        margin-top: 2em;
+        margin-bottom: 10vw;
+        padding-bottom: 45vw;
+    }
+    
+    #linkContainer {
+        width: 40vw;
+        margin: auto;
+        /*height: 15vw;
+        margin: 5vw;*/
+    }
+
+    #linkContainer > div {
+        flex-basis: auto;
+        position: relative;
+    }
+
+    .link {
+        width: 7vw;
+        height: auto;
+        margin: auto;
+        position: relative;
+        top: 50%;
+        margin-top: -7.5vw;
+    }
+    
+    
+    
+}
