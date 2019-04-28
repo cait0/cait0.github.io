@@ -9,72 +9,86 @@
 }
 
 html, body {
-    background-color: var(--random-background-color);
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    font-size: 10px;
-}
-
-body {
-    margin-top: 200px;
+    /*background-color: var(--random-background-color);*/
+    background-color: black;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
 }
 
 header {
+    /*display: block;*/
     display: block;
     position: fixed;
     top: 0px;
-    height: 200px;
+    height: 150px;
+    /*max-height: 15%;*/
     width: 100%;
-    background-color: var(--random-background-color);
-    z-index: 5;
+    margin: 0px;
+    padding: 10px 5%;
+    z-index: 500;
+    /*background-color: var(--random-background-color);*/
+    background-color: yellow;
 }
 
 #cait0_logo {
-    position: absolute;
-    width: 300px;
-    height: auto;
-    top: 50%;
-    margin-top: -44px;
-    left: 50%;
-    margin-left: -150px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: orange;
 }
 
-.text {
-    width: 600px;
-    margin: auto;
+.text-container {
+    /*display: block;*/
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0px 5%;
+    background-color: blue;
+}
+
+.text-container:nth-of-type(1) {
+    margin-top: 160px;
+    background-color: red;
+}
+
+p {
     font-family: 'Nanum Gothic Coding', monospace;
-    font-size: 1.6em;
     font-style: normal;
     font-weight: 300;
-    line-height: 1.7;
     text-align: left;
-    letter-spacing: 0.5px;
+    font-size: 16px; /* fallback */
+    font-size: 3.2vw;
+    line-height: 1.5;
+    letter-spacing: 0.4px;
+    color: white;
 }
 
-#passportImage {
-    width: 350px;
+#passport-image {
+    width: 45%;
+    height: auto;
     float: left;
-    margin: 10px 30px 20px -150px;
-    border: 1.5px solid black;
-    filter: drop-shadow(4px 4px)
+    margin: 0px 15px 15px 0px;
+    /*border: 1.5px solid black;*/
+    filter: drop-shadow(-5px -5px black);
 }
-
 
 
 /* IMAGE CAROUSEL */
-#slideshowContainer {
-    height: 375px;
-    width: 500px;
+
+#slideshow-container {
     position: relative;
+    display: block;
+    width: 90%;
+    height: 0;
+    padding-bottom: 67.5%;
     margin: auto;
-    margin-top: 50px;
-    margin-bottom: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     
     /* BORDERS CURRENTLY PUSHING SLIDESHOW OUT OF ITS PLACE
-    border: 1.5px solid black;
-    filter: drop-shadow(4px 4px);
-    */
+    border: 1.5px solid black;*/
     
 }
 
@@ -85,10 +99,11 @@ header {
     margin: 0px;
     background-image: url(Images/image_sprite.jpg);
     background-repeat: no-repeat;
-    background-position: -500px;
-    background-size: cover;
+    /*background-position: -500px;*/
+    background-position: 12.5%;
+    background-size: 900%;
+    /*filter: drop-shadow(-4px -4px);*/
 }
-
 
 
 /*NEXT KEYFRAMES*/
@@ -226,7 +241,7 @@ header {
 #leftArrow {
     height: 60px;
     position: absolute;
-    left: -65px;
+    left: -75px;
     top: 50%;
     margin-top: -30px;
     z-index: 1;
@@ -235,7 +250,7 @@ header {
 #rightArrow {
     height: 60px;
     position: absolute;
-    right: -65px;
+    right: -75px;
     top: 50%;
     margin-top: -30px;
     z-index: 1;
@@ -249,3 +264,34 @@ header {
     left: 50%;
     margin-left: -40px;
 }
+
+/* LINKS */
+
+#linkContainer {
+    display: flex;
+    position: static;
+    width: 350px;
+    height: 50px;
+    margin: 40px auto 40px auto;
+    justify-content: space-between;
+}
+
+#linkContainer > div {
+    flex-basis: auto;
+    position: relative;
+}
+
+.link {
+    width: 50px;
+    margin: auto;
+    position: relative;
+    opacity: 0.8;
+}
+
+#freecodecamp {
+    width: 65px;
+    top: 50%;
+    margin-top: -23px;
+}
+
+/* RESPONSIVE SETTINGS */
