@@ -18,14 +18,13 @@ html, body {
 
 header {
     /*display: block;*/
-    display: block;
+    display: flex;
     position: fixed;
     top: 0px;
-    height: 200px;
-    max-height: 10%;
-    width: 100%;
-    margin: 0px;
-    padding: 3% 5%;
+    height: 15vh;
+    min-height: 150px;
+    width: 90vw;
+    margin: 0vw 5vw;
     z-index: 500;
     /*background-color: var(--random-background-color);*/
     background-color: yellow;
@@ -33,8 +32,10 @@ header {
 
 #cait0_logo {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 90vw;
+    height: auto;
+    min-height: 80px;
+    max-height: 10vh;
     margin: auto;
     background-color: orange;
 }
@@ -109,7 +110,7 @@ p {
 #leftArrow {
     width: 15vw;
     position: absolute;
-    left: 0vw;
+    left: 10vw;
     bottom: -20vw;
     z-index: 1;
 }
@@ -117,7 +118,7 @@ p {
 #rightArrow {
     width: 15vw;
     position: absolute;
-    right: 0vw;
+    right: 10vw;
     bottom: -20vw;
     z-index: 1;
 }
@@ -268,9 +269,10 @@ p {
 #linkContainer {
     display: flex;
     position: static;
-    width: 350px;
-    height: 50px;
-    margin: 40px auto 40px auto;
+    background-color: yellow;
+    width: 90vw;
+    height: 15vw;
+    margin: 5vw;
     justify-content: space-between;
 }
 
@@ -280,10 +282,12 @@ p {
 }
 
 .link {
-    width: 50px;
+    width: 15vw;
+    height: auto;
     margin: auto;
     position: relative;
-    opacity: 0.8;
+    top: 50%;
+    margin-top: -7.5vw;
 }
 
 /* RESPONSIVE SETTINGS */
