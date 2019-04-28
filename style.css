@@ -298,6 +298,7 @@ p {
     
     .text-container {
         width: 70vw;
+        margin-bottom: 0;
     }
     
     .text-container:nth-of-type(1) {
@@ -363,6 +364,21 @@ p {
         margin: 0;
         margin-left: -6vw;
     }
+    
+     
+}
+
+@media only screen and (min-width:1024px) {
+    
+    .text-container {
+        
+        max-width: 600px;
+        
+    }
+    
+    .text-container:nth-of-type(1) {
+        background-color: purple;
+    }   
     
     
     
