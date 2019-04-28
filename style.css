@@ -297,7 +297,7 @@ p {
     }
     
     .text-container {
-        width: 60vw;
+        width: 100vw;
     }
     
     .text-container:nth-of-type(1) {
@@ -327,14 +327,10 @@ p {
     
     #linkContainer {
         width: 40vw;
+        height: 20vw;
         margin: auto;
         /*height: 15vw;
         margin: 5vw;*/
-    }
-
-    #linkContainer > div {
-        flex-basis: auto;
-        position: relative;
     }
 
     .link {
