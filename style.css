@@ -41,13 +41,13 @@ header {
     /*display: block;*/
     display: block;
     position: relative;
-    width: 90%;
+    width: 90vw;
     margin: auto;
     background-color: blue;
 }
 
 .text-container:nth-of-type(1) {
-    margin-top: 17.5vh;
+    margin-top: 15vh;
     background-color: red;
 }
 
