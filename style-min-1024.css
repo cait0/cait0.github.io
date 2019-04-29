@@ -1,0 +1,51 @@
+@media only screen and (min-width:1024px) {
+    
+    .text-container {
+        width: 50vw;
+    }
+    
+    #passport-image {
+        width: 25vw;
+    }
+    
+    #childhood-image {
+        width: 35vw;
+    }
+    
+    
+    #slideshow-container {
+        width: 50vw;
+        padding-bottom: 37.5vw; /* SLIDE IS INSIDE PADDING - 3/4 RATIO*/
+        margin-bottom: 7vw;
+    }
+    
+    #leftArrow {
+        width: 5vw;
+        left: -6vw;
+        margin-top: -3vw;
+    }
+    
+    #rightArrow {
+        width: 5vw;
+        right: -6vw;
+        margin-top: -3vw;
+    }
+
+    #playPauseButton {
+        width: 5vw;
+        margin-left: -2.5vw;
+        bottom: -6vw
+    }
+
+    #linkContainer {
+        width: 30vw;
+        height: 10vw;
+        margin: 0vw auto 0vw auto;
+    }
+
+    .link {
+        width: 4vw;
+        margin-top: -3vw;
+    }
+    
+}

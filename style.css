@@ -11,7 +11,7 @@
 html, body {
     background-color: var(--random-background-color);
     /*background-color: black;*/
-    width: 100%;
+    width: 100vw;
     padding: 0px;
     margin: 0px;
 }
@@ -31,7 +31,7 @@ header {
 
 #cait0_logo {
     display: block;
-    height: 12.5vh;
+    height: 12vh;
     max-width: 90vw;
     margin: auto;
     /*background-color: orange;*/
@@ -71,17 +71,17 @@ p {
 }
 
 #passport-image {
-    width: 40vw;
+    width: 45vw;
     height: auto;
-    float: left;
-    margin: 0px 15px 15px 0px;
-    /*border: 1.5px solid black;*/
+    float: right;
+    margin: 0 0 0.3em 0.5em;
     filter: drop-shadow(-5px -5px black);
 }
 
 #childhood-image {
     width: 90vw;
     filter: drop-shadow(-5px -5px black);
+    margin: 0.2em 0 1em 0;
 }
 
 /* IMAGE CAROUSEL */

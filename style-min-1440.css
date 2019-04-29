@@ -1,0 +1,22 @@
+@media only screen and (min-width:1440px) {
+
+    .text-container {
+        width: 40vw;
+    }
+    
+    #passport-image {
+        width: 17vw;
+    }
+    
+    #childhood-image {
+        width: 25.5vw;
+    }
+    
+    #slideshow-container {
+        width: 35vw;
+        padding-bottom: 26.25vw; /* SLIDE IS INSIDE PADDING - 3/4 RATIO*/
+        margin-bottom: 7vw;
+    }
+    
+}
+

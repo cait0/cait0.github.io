@@ -278,6 +278,7 @@ let rrrgggbbb_dark2 = "rgb("+rrr_dark2+","+ggg_dark2+","+bbb_dark2+")";
     }
 
     function play() {
+        auto_next();
         slideInterval = setInterval(auto_next, 3000);
         playing = true;
     }
