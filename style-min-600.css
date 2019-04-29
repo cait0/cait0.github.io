@@ -1,0 +1,89 @@
+@media only screen and (min-width:600px) {
+    
+    header {
+        height: 20vh;
+        /*background-color: yellow;*/
+        
+    }
+    
+    #cait0_logo {
+        height: 12vh;
+        max-width: 70vw;        
+    }
+    
+    .text-container {
+        width: 70vw;
+        margin-bottom: 0;
+    }
+    
+    .text-container:nth-of-type(1) {
+        margin-top: 25vh;
+    }
+    
+    p {
+        font-size: 1em;
+
+    }
+    
+    .date {
+        font-size: 1.2em;
+    }
+    
+    #passport-image {
+        width: 30vw;
+        height: auto;
+        margin: 0 -3em 0 0;
+        position: relative;
+        left: -4em;
+    }
+    
+    #childhood-image {
+        width: 45vw;
+        float: right;
+        position: relative;
+        right: -4em;
+        margin: 0 0 0 -3em;
+    }
+ 
+    #slideshow-container {
+        width: 70vw;
+        padding-bottom: 45vw; /* SLIDE IS INSIDE PADDING */
+        margin-top: 2em;
+        margin-bottom: 16vw;
+
+    }
+    
+    #leftArrow {
+        width: 9vw;
+        left: -11vw;
+        margin-left: 0;
+        top: 50%;
+        margin-top: -4.5vw;
+    }
+    
+    #rightArrow {
+        width: 9vw;
+        right: -11vw;
+        margin-right: 0;
+        top: 50%;
+        margin-top: -4.5vw;
+    }
+    
+    #playPauseButton {
+        width: 12vw;
+        margin-left: -6vw;
+        bottom: -14vw
+    }
+    
+    #linkContainer {
+        width: 55vw;
+        height: 25vw;
+        margin: 0vw auto 0vw auto;
+    }
+
+    .link {
+        width: 9vw;
+        margin-top: -5.5vw;
+    }
+    
+}
