@@ -105,10 +105,14 @@ p {
     /*filter: drop-shadow(-4px -4px);*/
 }
 
+/* BUTTONS */
+
 #leftArrow {
     width: 15vw;
     position: absolute;
-    left: 10vw;
+    /*left: 10vw;*/
+    left: 50%;
+    margin-left: -28vw;
     bottom: -20vw;
     z-index: 1;
 }
@@ -116,7 +120,9 @@ p {
 #rightArrow {
     width: 15vw;
     position: absolute;
-    right: 10vw;
+    /*right: 10vw;*/
+    right: 50%;
+    margin-right: -28vw;
     bottom: -20vw;
     z-index: 1;
 }
@@ -125,9 +131,38 @@ p {
     width: 20vw;
     position: absolute;
     bottom: -22.5vw;
-    left: 50vw;
+    left: 50%;
     margin: 0;
-    margin-left: -15vw;
+    margin-left: -10vw;
+
+}
+
+/* LINKS */
+
+#linkContainer {
+    display: flex;
+    position: static;
+    background-color: yellow;
+    width: 70vw;
+    height: 15vw;
+    margin: 5vw 15vw 5vw 15vw;
+    /*justify-content: space-between;*/
+    justify-content: space-between;
+}
+
+#linkContainer > div {
+    flex-basis: auto;
+    position: relative;
+    background-color: red;
+}
+
+.link {
+    width: 12vw;
+    height: auto;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    margin-top: -6vw;
 }
 
 /*NEXT KEYFRAMES*/
@@ -261,125 +296,3 @@ p {
     }
 }
 
-
-/* LINKS */
-
-#linkContainer {
-    display: flex;
-    position: static;
-    background-color: yellow;
-    width: 90vw;
-    height: 15vw;
-    margin: 5vw;
-    justify-content: space-between;
-}
-
-#linkContainer > div {
-    flex-basis: auto;
-    position: relative;
-}
-
-.link {
-    width: 15vw;
-    height: auto;
-    margin: auto;
-    position: relative;
-    top: 50%;
-    margin-top: -7.5vw;
-}
-
-/* RESPONSIVE SETTINGS */
-
-@media only screen and (min-width:768px) {
-    
-    #cait0_logo {
-        max-width: 40vw;
-    }
-    
-    .text-container {
-        width: 70vw;
-        margin-bottom: 0;
-    }
-    
-    .text-container:nth-of-type(1) {
-        background-color: black;
-    }
-    
-    p {
-        font-size: 1em;
-    }
-    
-    #passport-image {
-        position: relative;
-        width: 25vw;
-        left: -5vw;
-        float: left;
-        /*margin: 0vw 3vw 3vw 0vw;*/
-        /*border: 1.5px solid black;*/
-        filter: drop-shadow(-5px -5px black);
-    }
- 
-    #slideshow-container {
-        width: 70vw;
-        padding-bottom: 45vw; /* SLIDE IS INSIDE PADDING */
-        margin-top: 2em;
-        margin-bottom: 14vw;
-
-    }
-    
-    #linkContainer {
-        width: 40vw;
-        height: 15vw;
-        margin: auto;
-        /*height: 15vw;
-        margin: 5vw;*/
-    }
-
-    .link {
-        width: 7vw;
-        margin-top: -3.5vw;
-    }
-    
-    #leftArrow {
-        width: 8vw;
-        position: absolute;
-        left: -9vw;
-        top: 50%;
-        margin-top: -5vw;
-    }
-
-    #rightArrow {
-        width: 8vw;
-        position: absolute;
-        right: -9vw;
-        top: 50%;
-        margin-top: -5vw;
-    }
-
-    #playPauseButton {
-        width: 12vw;
-        position: absolute;
-        bottom: -13vw;
-        left: 50%;
-        margin: 0;
-        margin-left: -6vw;
-    }
-    
-     
-}
-
-@media only screen and (min-width:1024px) {
-    
-    .text-container {
-        
-        max-width: 600px;
-        
-    }
-    
-    .text-container:nth-of-type(1) {
-        background-color: purple;
-    }   
-    
-    
-    
-}
