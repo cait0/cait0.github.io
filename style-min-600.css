@@ -2,13 +2,12 @@
     
     header {
         height: 20vh;
-        /*background-color: yellow;*/
         
     }
     
     #cait0_logo {
         height: 12vh;
-        max-width: 70vw;        
+        max-width: 70vw;
     }
     
     .text-container {
@@ -76,14 +75,14 @@
     }
     
     #linkContainer {
-        width: 55vw;
-        height: 25vw;
+        width: 45vw;
+        height: 20vw;
         margin: 0vw auto 0vw auto;
     }
 
     .link {
-        width: 9vw;
-        margin-top: -5.5vw;
+        width: 8vw;
+        margin-top: -5vw;
     }
     
 }
