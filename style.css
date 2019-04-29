@@ -20,21 +20,19 @@ header {
     display: flex;
     position: fixed;
     top: 0px;
-    height: 15vh;
+    height: 20vh;
     width: 100vw;
     margin: 0;
     padding: auto 5vw;
     z-index: 500;
     background-color: var(--random-background-color);
-    /*background-color: yellow;*/
 }
 
 #cait0_logo {
     display: block;
-    height: 12vh;
+    height: 15vh;
     max-width: 90vw;
     margin: auto;
-    /*background-color: orange;*/
 }
 
 .text-container {

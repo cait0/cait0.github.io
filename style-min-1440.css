@@ -1,5 +1,14 @@
 @media only screen and (min-width:1440px) {
 
+    header {
+        height: 20vh;
+    }
+    
+    #cait0_logo {
+        height: 12.5vh;
+        max-width: 40vw;
+    }
+    
     .text-container {
         width: 40vw;
     }
@@ -16,6 +25,35 @@
         width: 35vw;
         padding-bottom: 26.25vw; /* SLIDE IS INSIDE PADDING - 3/4 RATIO*/
         margin-bottom: 7vw;
+    }
+    
+    #leftArrow {
+        width: 5vw;
+        left: -6vw;
+        margin-top: -2.5vw;
+    }
+    
+    #rightArrow {
+        width: 5vw;
+        right: -6vw;
+        margin-top: -2.5vw;
+    }
+
+    #playPauseButton {
+        width: 5vw;
+        margin-left: -2.5vw;
+        bottom: -6vw
+    }
+    
+    #linkContainer {
+        width: 25vw;
+        height: 10vw;
+        margin: 0vw auto 0vw auto;
+    }
+    
+    .link {
+        width: 3.5vw;
+        margin-top: -3vw;
     }
     
 }
