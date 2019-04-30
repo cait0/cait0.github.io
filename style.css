@@ -62,7 +62,7 @@ p {
 }
 
 .date {
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 600;
     position: relative;
     text-align: right;
@@ -71,7 +71,7 @@ p {
 .first::first-letter {
     font-size: 3em;
     font-weight: 400;
-    margin-left: 10vw;
+    margin-left: 6vw;
     line-height: 1;
 }
 

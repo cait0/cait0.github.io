@@ -58,6 +58,10 @@
             width: 32vw; 
         }
         
+        .first::first-letter {
+            margin-left: 4vw;
+        }
+        
     }
  
     #slideshow-container {
@@ -91,14 +95,14 @@
     }
     
     #linkContainer {
-        width: 45vw;
+        width: 40vw;
         height: 20vw;
         margin: 0vw auto 0vw auto;
     }
 
     .link {
-        width: 8vw;
-        margin-top: -5vw;
+        width: 6vw;
+        margin-top: -4vw;
     }
     
 }

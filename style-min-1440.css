@@ -13,6 +13,10 @@
         width: 40vw;
     }
     
+    .first::first-letter {
+        margin-left: 4vw;
+    }
+    
     #passport-image {
         width: 22.5vw;
     }
@@ -24,25 +28,25 @@
     #slideshow-container {
         width: 35vw;
         padding-bottom: 26.25vw; /* SLIDE IS INSIDE PADDING - 3/4 RATIO*/
-        margin-bottom: 7vw;
+        margin-bottom: 6.5vw;
     }
     
     #leftArrow {
-        width: 5vw;
-        left: -6vw;
-        margin-top: -2.5vw;
+        width: 4.5vw;
+        left: -5.5vw;
+        margin-top: -2.25vw;
     }
     
     #rightArrow {
-        width: 5vw;
-        right: -6vw;
-        margin-top: -2.5vw;
+        width: 4.5vw;
+        right: -5.5vw;
+        margin-top: -2.25vw;
     }
 
     #playPauseButton {
-        width: 5vw;
-        margin-left: -2.5vw;
-        bottom: -6vw
+        width: 4.5vw;
+        margin-left: -2.25vw;
+        bottom: -5.5vw
     }
     
     #linkContainer {
