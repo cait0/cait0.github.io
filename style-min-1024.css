@@ -6,7 +6,8 @@
     
     #cait0_logo {
         height: 12.5vh;
-        max-width: 50vw;
+        width: 40vw;
+        max-width: 450px;
     }
     
     .text-container {
@@ -18,7 +19,7 @@
     }
     
     #childhood-image {
-        width: 35vw;
+        width: 37.5vw;
     }
     
     #slideshow-container {

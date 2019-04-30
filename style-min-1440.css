@@ -6,7 +6,7 @@
     
     #cait0_logo {
         height: 12.5vh;
-        max-width: 40vw;
+        /*max-width: 40vw;*/
     }
     
     .text-container {
@@ -14,7 +14,7 @@
     }
     
     #passport-image {
-        width: 17vw;
+        width: 22.5vw;
     }
     
     #childhood-image {

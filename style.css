@@ -62,24 +62,41 @@ p {
 }
 
 .date {
-    font-size: 4vw;
+    font-size: 1.2em;
     font-weight: 600;
     position: relative;
-    text-align: left;
+    text-align: right;
+}
+
+.first::first-letter {
+    font-size: 3em;
+    font-weight: 400;
+    margin-left: 10vw;
+    line-height: 1;
+}
+
+#dot {
+    background: black;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    margin-left: -0.25em;
 }
 
 #passport-image {
-    width: 45vw;
+    width: 55vw;
     height: auto;
-    float: right;
-    margin: 0 0 0.3em 0.5em;
+    float: left;
+    margin: 0 0.5em 0.3em 0em;
     filter: drop-shadow(-5px -5px black);
 }
 
 #childhood-image {
     width: 90vw;
-    filter: drop-shadow(-5px -5px black);
     margin: 0.2em 0 1em 0;
+    filter: drop-shadow(-5px -5px black);
 }
 
 /* IMAGE CAROUSEL */

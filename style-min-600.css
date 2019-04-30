@@ -7,6 +7,7 @@
     #cait0_logo {
         height: 12.5vh;
         max-width: 70vw;
+        max-width: 400px;
     }
     
     .text-container {
@@ -30,19 +31,33 @@
         width: 37.5vw;
         max-width: 275px;
         height: auto;
-        margin: 0 0 0.4em -3em;
+        margin: 0 -3em 0.4em 0em;
         position: relative;
         top: 0.3em;
-        right: -4em;
+        left: -4em;
     }
     
     #childhood-image {
         width: 45vw;
-        float: left;
+        /*display: block;*/
         position: relative;
+        float: right;
         top: 0.3em;
-        left: -4em;
-        margin: 0 -3em 0.4em 0;
+        right: -4em;
+        margin: 0 0 0.4em -3em;
+        /*margin: 1em auto 1em auto;*/
+    }
+    
+    @media only screen and (min-width:850px) {
+        
+        #childhood-image {
+            width: 40vw;
+        }
+        
+        #passport-image {
+            width: 32vw; 
+        }
+        
     }
  
     #slideshow-container {
